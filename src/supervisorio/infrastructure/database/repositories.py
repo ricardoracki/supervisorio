@@ -99,7 +99,7 @@ class PesagemRepository(RepositoryBase[ModbusReadPayload]):
             args.append(periodo[1])
             query += f' timestamp::date BETWEEN ${len(args) - 1} AND ${len(args)}'
         elif timestamp is not None:
-            appendFilter('timestamp', timestamp)
+            appendFilter('timestamp::date', timestamp)
 
         if maquina_id is not None:
             appendFilter('maquina_id', maquina_id)
