@@ -18,3 +18,10 @@ async def test_event_manager_dispatch_calls_registered_handler():
 
     await manager.dispatch("event")
     handler.assert_called_once()
+
+
+@pytest.mark.asyncio
+async def test_no_handler_does_not_raise():
+    manager = EventManager()
+    # shouldn’t raise
+    await manager.dispatch("non_existent_event")
