@@ -1,0 +1,9 @@
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: sup_vis
+      POSTGRES_USER: docker
+      POSTGRES_PASSWORD: docker
+    ports:
+      - "5432:5432"

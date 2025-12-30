@@ -1,0 +1,24 @@
+GET http://localhost:8000/api/v1/health
+
+
+###
+GET http://localhost:8000/api/v1/pesagens
+
+
+###
+GET http://localhost:8000/api/v1/pesagens?maquina_id=1&data=2025-12-26
+
+###
+GET http://localhost:8000/api/v1/pesagens/metrics
+
+
+###
+GET http://localhost:8000/api/v1/hhh
+
+
+###
+GET http://localhost:8000/api/v1/realtime/CW1
+
+
+###
+GET http://localhost:8000/api/v1/eventos?limit=20&maquina_id=1

@@ -1,0 +1,35 @@
+[global]
+DATABASE_URL = 'postgresql://docker:docker@localhost:5432/sup_vis' # banco local
+
+[observer]
+[[observer.checkweighers]]
+name = "CW1"
+ip_address = "192.168.1.70"
+port = 502
+cw_id = "1" # Não aleterar depois de cadastrado
+enabled = true
+# timeout = 5.0 # (optional)
+# poll_interval = 0.1 # (optional)
+
+[[observer.checkweighers]]
+name = "CW2"
+ip_address = "192.168.1.80"
+port = 502
+cw_id = "2" # Não aleterar depois de cadastrado
+enabled = false
+# timeout = 5.0 # (optional)
+# poll_interval = 0.1 # (optional)
+
+[[observer.checkweighers]]
+name = "CW1"
+ip_address = "192.168.1.90"
+port = 502
+cw_id = "3" # Não aleterar depois de cadastrado
+enabled = false # Não é processado
+# timeout = 5.0 # (optional)
+# poll_interval = 0.1 # (optional)
+
+[api]
+port=8000
+host="0.0.0.0"
+url="http://localhost:8000/"
