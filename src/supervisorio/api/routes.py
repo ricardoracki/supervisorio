@@ -1,11 +1,9 @@
 import time
-from supervisorio.core.monitor import monitor
-from fastapi import APIRouter
 from fastapi import APIRouter, Query
-from datetime import date
+from datetime import datetime, date
+from supervisorio.core.monitor import monitor
 from supervisorio.infrastructure.database.repositories import PesagemRepository, EventRepository
 from supervisorio.utils.date import range_date
-from datetime import datetime
 from supervisorio.core.config import settings
 
 
