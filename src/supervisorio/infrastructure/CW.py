@@ -117,6 +117,7 @@ class CheckWeigher(EventManager):
                 await self.disconnect()
                 await self.reconnect_with_backoff()
                 self.logger.warning(f'{e}')
+                await asyncio.sleep(self.timeout)
 
             except Exception as e:
                 self.metrics.reads_error += 1

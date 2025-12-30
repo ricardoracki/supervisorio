@@ -7,7 +7,7 @@ name = "CW1"
 ip_address = "192.168.1.70"
 port = 502
 cw_id = "1" # Não aleterar depois de cadastrado
-enabled = true
+enabled = false
 # timeout = 5.0 # (optional)
 # poll_interval = 0.1 # (optional)
 
